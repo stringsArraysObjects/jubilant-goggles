@@ -1,4 +1,4 @@
-//The user will enter a date. Use that date to get the NASA picture of the day from that date! https://api.nasa.gov/
+document.querySelector('.image-container').src = localStorage.getItem('picOfTheDay')
 document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
@@ -10,14 +10,11 @@ function getFetch(){
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         console.log(data)
-        localStorage.getItem('picOfTheDay')
         if(data.media_type === 'image'){
           document.querySelector('.image-container').src = data.hdurl
           localStorage.setItem('picOfTheDay', data.hdurl)
         }else if(data.media_type === 'video'){
           document.querySelector('iframe').src = data.url
-          localStorage.setItem('picOfTheDay', data.hdurl)
-
         }
         document.querySelector('span').innerText = data.explanation
       })
