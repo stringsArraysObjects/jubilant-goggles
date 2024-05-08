@@ -17,6 +17,8 @@ function getFetch(){
           document.querySelector('iframe').src = data.url
         }
         document.querySelector('span').innerText = data.explanation
+        document.querySelector('h3').innerText = data.title
+        
       })
       .catch(err => {
           console.log(`error ${err}`)
