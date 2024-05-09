@@ -16,7 +16,7 @@ function getFetch(){
         }else if(data.media_type === 'video'){
           document.querySelector('iframe').src = data.url
         }
-        document.querySelector('span').innerText = data.explanation
+        document.querySelector('p').innerText = data.explanation
         document.querySelector('h3').innerText = data.title
         
       })
