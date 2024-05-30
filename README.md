@@ -1,2 +1,3 @@
 <em>APOD</em>
-<div>![Molecular Cloud](image.png)</div>
+<div></div>
+![Molecular Cloud](image.png)
