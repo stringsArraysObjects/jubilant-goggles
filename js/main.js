@@ -1,4 +1,4 @@
-document.querySelector('.image-container').src = localStorage.getItem('picOfTheDay')
+//document.querySelector('.image-container').src = localStorage.getItem('picOfTheDay')
 document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
@@ -11,13 +11,13 @@ function getFetch(){
       .then(data => {
         console.log(data)
         if(data.media_type === 'image'){
-          document.querySelector('.image-container').src = data.hdurl
-          localStorage.setItem('picOfTheDay', data.hdurl)
+          document.querySelector('img').src = data.hdurl
+          //localStorage.setItem('picOfTheDay', data.hdurl)
         }else if(data.media_type === 'video'){
           document.querySelector('iframe').src = data.url
         }
         document.querySelector('p').innerText = data.explanation
-        document.querySelector('h3').innerText = data.title
+        document.querySelector('figcaption').innerText = data.title
         
       })
       .catch(err => {

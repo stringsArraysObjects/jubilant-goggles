@@ -11,13 +11,47 @@
 /* LAYOUT
 /*******************************************/
 img{
-  display: block;
-  margin: 0 auto;
+  /* display: block; */
+  padding: 5% 10%;
+  margin: 0 10%;
+  height: 10%;
+  width: 70%;
+  
+
 }
 body{
   background-color: rgb(92, 89, 89);
 }
+header{
+  font-size: 150%;
+  padding: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  background-color: blueviolet;
+  border-radius: 15px;
+}
+nav li {
+  display: inline-block;
+  padding-top: 5%;
+  list-style: none;
+}
+  
+figure{
+  border-color: #1e1e1e;
+}
 
+figcaption{
+  font-weight: bold;
+  padding-left: 5%;
+}
+
+p{
+  text-align: justify;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-shadow: 5px 5px 5px #1e1e1e;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
