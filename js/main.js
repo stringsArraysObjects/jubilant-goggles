@@ -1,4 +1,4 @@
-//document.querySelector('.image-container').src = localStorage.getItem('picOfTheDay')
+document.querySelector('.image-container').src = localStorage.getItem('picOfTheDay')
 document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
@@ -12,7 +12,7 @@ function getFetch(){
         console.log(data)
         if(data.media_type === 'image'){
           document.querySelector('img').src = data.hdurl
-          //localStorage.setItem('picOfTheDay', data.hdurl)
+          localStorage.setItem('picOfTheDay', data.hdurl)
         }else if(data.media_type === 'video'){
           document.querySelector('iframe').src = data.url
         }
